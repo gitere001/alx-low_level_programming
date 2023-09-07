@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - a program that prints the size of various types of computer it is confined
+ * main - a program that prints the size of various computer
  * Return: 0 (success)
  */
 int main(void)
