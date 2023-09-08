@@ -1,34 +1,35 @@
 #include <stdio.h>
 
+
 /**
- * main - Entry point
- * Return: Always 0 (Success)
+ * main - prints all possible combinations of two two-digit
+ *
+ * Return: Always 0.
+ *
  */
 
 int main(void)
+
 {
-    int tens;
-    int ones;
+	int num1, num2;
 
-    for (tens = 0; tens < 100; tens++)
-    {
-        for (ones = 0; ones < 100; ones++)
-        {
-            putchar((tens / 10) + '0');
-            putchar((tens % 10) + '0');
-            putchar(' ');
-            putchar((ones / 10) + '0');
-            putchar((ones % 10) + '0');
+	for (num1 = 0; num1 <= 98; num1++)
+	{
+		for (num2 = num1 + 1; num2 <= 99; num2++)
+		{
+			putchar((num1 / 10) + '0');
+			putchar((num1 % 10) + '0');
+			putchar(' ');
+			putchar((num2 / 10) + '0');
+			putchar((num2 % 10) + '0');
 
-            if (!(tens == 99 && ones == 99))
-            {
-                putchar(',');
-                putchar(' ');
-            }
-        }
-    }
+			if (num1 == 98 && num2 == 99)
+				continue;
+			putchar(',');
+			putchar(' ');
+		}
+	}
+	putchar('\n');
 
-    putchar('\n');
-
-    return (0);
+	return (0);
 }
