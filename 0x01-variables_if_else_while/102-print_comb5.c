@@ -7,24 +7,28 @@
 
 int main(void)
 {
-	int first_digit;
-	int second_digit;
+    int tens;
+    int ones;
 
-	for (first_digit = 0; first_digit <= 9; first_digit++)
-	{
-		for (second_digit = 0; second_digit <= 9; second_digit++)
-		{
-			putchar((first_digit % 10) + '0');
-			putchar((second_digit % 10) + '0');
+    for (tens = 0; tens < 100; tens++)
+    {
+        for (ones = 0; ones < 100; ones++)
+        {
+            putchar((tens / 10) + '0');
+            putchar((tens % 10) + '0');
+            putchar(' ');
+            putchar((ones / 10) + '0');
+            putchar((ones % 10) + '0');
 
-			if (!(first_digit == 9 && second_digit == 9))
-			{
-				putchar(' ');
-				putchar(' ');
-			}
-		}
-	}
-	putchar('\n');
+            if (!(tens == 99 && ones == 99))
+            {
+                putchar(',');
+                putchar(' ');
+            }
+        }
+    }
 
-	return (0);
+    putchar('\n');
+
+    return (0);
 }
