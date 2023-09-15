@@ -5,7 +5,7 @@
  *
  * @c: input character
  *
- * Rreturn: (1) for (0) false
+ * Return: (1) for (0) false
  *
  */
 int _isupper(int c)
