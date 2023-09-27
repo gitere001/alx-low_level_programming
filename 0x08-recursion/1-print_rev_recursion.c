@@ -3,7 +3,7 @@
 /**
  * _print_rev_recursion - function to print a string in rev
  * @s: function parameter
- * Return: void
+ * Return: 0
  */
 void _print_rev_recursion(char *s)
 {
@@ -12,5 +12,4 @@ void _print_rev_recursion(char *s)
 		_print_rev_recursion(s + 1);
 		_putchar(*s);
 	}
-	return (0);
 }
