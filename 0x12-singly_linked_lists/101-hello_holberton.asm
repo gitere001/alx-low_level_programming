@@ -1,5 +1,5 @@
 section .data
-    format db "Hello, Holberton", 10, 0   ; Define the format string, including a newline character
+    hello db "Hello, Holberton", 10, 0  ; Define the format string, including a newline character
 
 section .text
     global main
@@ -7,7 +7,7 @@ section .text
 
 main:
     sub rsp, 8             ; Align the stack for printf
-    mov rdi, format        ; Load the address of the format string into rdi
+    mov rdi, hello         ; Load the address of the format string into rdi
     call printf            ; Call the printf function
     add rsp, 8             ; Restore the stack
     ret
