@@ -41,5 +41,7 @@ listint_t *reverse_listint(listint_t **head);
 size_t free_listint_safe(listint_t **h);
 size_t print_listint_safe(const listint_t *head);
 void free_list_safe(listp_t **head);
+void clear_my_list(listp_t **my_head);
+size_t free_listint_safe(listint_t **h);
 
 #endif
