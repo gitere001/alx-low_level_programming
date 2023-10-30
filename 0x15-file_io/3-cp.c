@@ -21,7 +21,6 @@ void error_file(int file_from, int file_to, char *argv[])
 		exit(99);
 	}
 }
-
 /**
  * main - Entry point for copying a file.
  * @argc: Number of command-line arguments.
@@ -32,11 +31,11 @@ int main(int argc, char *argv[])
 {
 	int file_from, file_to, err_close;
 	ssize_t nchars, nwr;
-	char buffer[1024];
+	char buf[1024];
 
 	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "Usage: %s file_from file_to\n", argv[0]);
+		dprintf(STDERR_FILENO, "%s\n", "Usage: cp file_from file_to");
 		exit(97);
 	}
 
@@ -47,10 +46,10 @@ int main(int argc, char *argv[])
 	nchars = 1024;
 	while (nchars == 1024)
 	{
-		nchars = read(file_from, buffer, 1024);
+		nchars = read(file_from, buf, 1024);
 		if (nchars == -1)
 			error_file(-1, 0, argv);
-		nwr = write(file_to, buffer, nchars);
+		nwr = write(file_to, buf, nchars);
 		if (nwr == -1)
 			error_file(0, -1, argv);
 	}
