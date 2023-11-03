@@ -1,1 +1,1 @@
-debugging tasks
+This repository holds functions and programs in c programming 
