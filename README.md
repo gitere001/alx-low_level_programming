@@ -1,1 +1,1 @@
-This repository holds functions and programs in c programming 
+This repository holds functions and programs in c programming language 
